@@ -38,6 +38,7 @@ on:
         options: 
           - OpenWrt.config
           - LEDE.config
+          - LEDE_R2100.config
       custom_script1:
         description: feeds下载前执行
         required: true
