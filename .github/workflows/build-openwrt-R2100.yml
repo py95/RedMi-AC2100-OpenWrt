@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build RM2100 OpenWrt
+name: Build R2100 OpenWrt
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ on:
 env:
   SYSTEM_NAME: openwrt
   REPO_BRANCH: master
-  CONFIG_FILE: OpenWrt_RM2100.config
+  CONFIG_FILE: OpenWrt_R2100.config
   DIY_P1_SH: OpenWrt-part1.sh
   DIY_P2_SH: OpenWrt-part2.sh
   UPLOAD_BIN_DIR: false
