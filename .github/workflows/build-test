@@ -8,12 +8,10 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build RM2100 OpenWrt
+name: test Build RM2100 OpenWrt
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 19 * * *
 
 env:
   SYSTEM_NAME: openwrt
