@@ -12,6 +12,8 @@ name: Build R2100 OpenWrt
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: 0 19 * * *
 
 env:
   SYSTEM_NAME: openwrt
