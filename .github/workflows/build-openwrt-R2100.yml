@@ -120,7 +120,7 @@ jobs:
       run: |
         cd openwrt/bin/targets/*/*
         cat sha256sums
-        cp openwrt/.config build.config
+        # cp openwrt/.config build.config
         mv -f openwrt/bin/packages/*/*/*.ipk packages
         tar -zcf Packages.tar.gz packages
         rm -rf packages feeds.buildinfo version.buildinfo
@@ -132,8 +132,8 @@ jobs:
       if: steps.compile.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
-
+        path: ${{ env.FIRMWARE_PATH }}
+        
     - name: 生成 release 标签
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
